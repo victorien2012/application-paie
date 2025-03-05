@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\ConfigurationController;
@@ -61,6 +62,8 @@ Route::prefix('Employers')->group(function (){
 
 });
 
+
+//Routes configurations
 Route ::prefix('configurations')->group(function(){
     Route::get('/',[ConfigurationController::class, 'index'])->name('configuration.index');
     Route::get('/create',[ConfigurationController::class,'create'])->name('configurations.create');
@@ -70,4 +73,18 @@ Route ::prefix('configurations')->group(function(){
     Route::get('/edit/{configuration}', [ConfigurationController::class, 'edit'])->name('configurations.edit');
     Route::put('/update/{configuration}', [ConfigurationController::class, 'update'])->name('configurations.update');
     Route::get('/delete/{configuration}', [ConfigurationController::class, 'delete'])->name('configurations.delete');
+
+
+
+
+    Route::prefix('admins')->group(function(){
+        Route::get('/', [AdminController::class, 'index'])->name('admins.index');
+        Route::get('/create', [AdminController::class, 'create'])->name('admins.create');
+        Route::post('/create', [AdminController::class, 'store'])->name('admins.store'); // ✅ Changer GET en POST
+        Route::get('/edit/{admins}', [AdminController::class, 'edit'])->name('admins.edit');
+        Route::put('/edit/{admins}', [AdminController::class, 'update'])->name('admins.update');
+        Route::delete('/delete/{admins}', [AdminController::class, 'delete'])->name('admins.delete'); // ✅ Changer GET en DELETE
+    });
+
+
 });

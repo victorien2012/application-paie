@@ -89,7 +89,7 @@
 
                         <div class="mb-3">
                             <label for="setting-input-3" class="form-label">Montant journalier</label>
-                            <input type="number" class="form-control" id="setting-input-5" name="montant_journalier" placeholder="Entrer le Montant journalier" value="{{old('contact')}}" required>
+                            <input type="" class="form-control" id="setting-input-5" name="montant_journalier" placeholder="Entrer le Montant journalier" value="{{old('contact')}}" required>
                         </div>
 
                         @error('montant_journalier')
@@ -104,6 +104,10 @@
                         <button type="submit" class="btn app-btn-primary" >Ajouter</button>
                     </form>
                 </div><!--//app-card-body-->
+
+
+
+
 
             </div><!--//app-card-->
         </div>

@@ -34,7 +34,7 @@
                                 @method('POST')
                             <div class="email mb-3">
 
-{{--                                {{Hash::make('1234')}}--}}
+{{--                            <!-- {{Hash::make('1234')}} -->--}}
 
                             <label class="sr-only" for="signin-email ">Email</label>
                                 @error('email')

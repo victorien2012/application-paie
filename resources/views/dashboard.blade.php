@@ -7,7 +7,11 @@ je suis connecté
 
         @yield('content')
 
-        <h1 class="app-page-title">Statistique</h1>
+        <h1 class="app-page-title">Tableau de bord</h1>
+        <div class="row mt-2 mb-2 g-2">
+            @if($paiementNotification) @endif
+            <div class="alert alert-danger" ><b>Attention: </b>{{$paiementNotification}}</div>
+        </div>
 
 
         <div class="row g-4 mb-4">

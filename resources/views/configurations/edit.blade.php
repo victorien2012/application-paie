@@ -26,7 +26,7 @@
                                 @foreach($configurations as $configuration)
                                     <option value=""></option>
                                     <option value="{{$configurations->id}}"
-                                        {{$configurations->configurations_id ===$configurations_id->id ? 'selected':''}}>{{$configurations->type}}</option>
+                                        {{$configurations->configurations_id ===$configuration_id->id ? 'selected':''}}>{{$configuration->type}}</option>
                                 @endforeach
                             </select>
                             @error('configurations_id')

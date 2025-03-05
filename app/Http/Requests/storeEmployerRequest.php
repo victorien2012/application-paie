@@ -39,11 +39,11 @@ class storeEmployerRequest extends FormRequest
         return [
             'departement_id'=>'le choix du département est requis',
             'first_name.required'=>'le nom du département est requis',
-            'last_name.unqiue'=>'le nom du département est requis',
-            'email.unqiue'=> 'le nom du département existe déjà',
-            'contact.unqiue'=>'le nom du département existe déjà',
+            'last_name.unique'=>'le nom du département est requis',
+            'email.unique'=> 'le nom du département existe déjà',
+            'contact.unique'=>'le nom du département existe déjà',
             'sexe.required'=>'veuillez préciser le sexe',
-            'montant_journalier.unqiue'=>'le montant journalier est requis'
+            'montant_journalier.unique'=>'le montant journalier est requis'
         ];
     }
 }

@@ -73,11 +73,12 @@ class ConfigurationController extends Controller
 //            $configuration = Configuration::findOrFail($id);
             $configuration->delete();
 
-            return redirect()->route('configurations.index')->with('success_message', 'L\'employé a été supprimé avec succès');
+            return redirect()->route('configuration.index')->with('success_message', 'L\'employé a été supprimé avec succès');
         } catch (Exception $e) {
             return redirect()->back()->withErrors(['error_message' => 'Erreur lors de la suppression de l\'employé.']);
         }
     }
 
 }
+
 

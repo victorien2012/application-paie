@@ -26,6 +26,7 @@ class EmployerController extends Controller
     public function edit(Employer $employer){
 
         $departements = Departement::all();
+//        dd($employer);
         return view ('employers.edit',compact('employer', 'departements'));
     }
 
@@ -40,6 +41,8 @@ class EmployerController extends Controller
             $employer->sexe = $request->sexe;
             $employer->contact = $request->contact;
             $employer->montant_journalier = $request->montant_journalier;
+
+//            dd($employer);
             $employer->save();
 
             return redirect()->route('employers.store')->with('success_message', 'L\'employé a été ajouté avec succès');

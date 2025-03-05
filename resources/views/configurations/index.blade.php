@@ -77,21 +77,38 @@
 
                                     <td class="cell"> <span class="truncate"></span>{{$configuration->type}}
                                         @if ($configuration->type==='PAIEMENT_DATE')
-                                            de chaque fin du mois
+                                            date mensuel de paiement
                                     @endif
                                     <td class="cell"> <span class="truncate"></span>{{$configuration->value}}
+
+                                                                                @if($configuration->type==='PAIEMENT_DATE')
+                                                                                        de chaque fin du mois
+
+                                                                                @endif
+
+
+                                                                                @if($configuration->type==='APP_NAME')
+                                                                                        Nom de l'application
+
+                                                                                @endif
+
+                                                                                @if($configuration->type==='DEVELOPPER_NAME')
+                                                                                        Equipe de developpement
+
+                                                                                @endif
+
+                                                                                @if($configuration->type==='ANATHER')
+                                                                                    autre
+
+                                                                                @endif
 
 
                                     </td>
 
                                     <td class="cell" >
 {{--                                        <a class="btn-sm app-btn-secondary" href="{{route('configurations.edit', $configuration->id)}}">Modifier</a>--}}
-                                        <a class="btn-sm app-btn-secondary" href="{{route('configurations.delete', $configuration->id)}}">Supprimer</a>
+                                        <a class="btn-sm app-btn-secondary" href="{{route('configurations.delete', $configuration->id)}}">Retirer</a>
 
-{{--                                        @if($configurations->type == 'PAIEMENT_DATE')--}}
-{{--                                                de chaque fin du mois--}}
-
-{{--                                        @endif--}}
                                     </td>
                                 </tr>
 
